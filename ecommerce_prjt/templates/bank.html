@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- <div class="hero-wrap hero-bread" style="background-image:{% static 'images/bg_6.jpg' %}">-->
+<!--      <div class="container h-100 padding"">-->
+<!--        <div class="row no-gutters slider-text align-items-center justify-content-center">-->
+       ?
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!-- <section class="ftco-section">-->
+<div class="mask d-flex align-items-center h-100 gradient-custom padding:100px">
+
+     <div class="container" style="padding:100px";>
+         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Bank Checkout Form</p>
+<!--         <div class="card" >-->
+            <div class="row justify-content-center" >
+                 <div class="col-12 "  >
+
+                       <form class="mx-1 mx-md-4" action="{% url 'successful' %}" method="post">
+                         {% csrf_token %}
+                         <div class="container ">
+                          <div class="row justify-content-center">
+                            <div class="col-sm-6">
+                               <div class="card">
+                                 <div class="card-header">
+                              <!--<strong>Credit Card</strong>-->
+                                <small>Enter the details for payment</small>
+                             </div>
+                                 <div class="card-body">
+                                   <div class="row">
+                                        <div class="col-sm-12">
+                                           <div class="form-group">
+
+                                              <div class="row">
+                                                  <div class="col-sm-12">
+                                                     <div class="form-group">
+                                                         <label for="acnumber">Account Number</label>
+                                                         <div class="input-group">
+                                                                    <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
+                                                                      <div class="input-group-append">
+                                                                         <span class="input-group-text">
+                                                                           <i class="mdi mdi-credit-card"></i>
+                                                                         </span>
+                                                                      </div>
+                                                         </div>
+
+                                                         <label for="name">Name</label>
+                                                         <input class="form-control" id="name" type="text" placeholder="Enter your name">
+                                                     </div>
+                                                  </div>
+                                               </div>
+                                           </div>
+                                        </div>
+                                   </div>
+                                   <label for="name">Expiration Date</label>
+                                   <div class="row">
+                                     <div class="form-group col-sm-4">
+                                             <label for="ccmonth">Month</label>
+                                            <input type="text" id="month" name="month" class="form-control" value="">
+                                     </div>
+                                     <div class="form-group col-sm-4">
+                                            <label for="ccyear">Year</label>
+                                            <input type="text" id="year" name="year" class="form-control" value="">
+                                     </div>
+                                     <div class="col-sm-4">
+                                       <div class="form-group">
+                                          <label for="cvv">CVV/CVC</label>
+                                           <input class="form-control" id="cvv" type="text" value="">
+                                       </div>
+                                     </div>
+                                   </div>
+                               </div>
+                                 <div class="card-footer">
+                                   <div class="row justify-content-center">
+                                     <button type="submit" class="btn btn-primary " >
+                                         <iclass="mdi mdi-gamepad-circle"></i> Pay
+                                     </button>
+
+                                           <!--<button class="btn btn btn-danger" type="reset">-->
+                                            <!--<i class="mdi mdi-lock-reset"></i> Reset</button>-->
+                                   </div>
+                                 </div>
+                               </div>
+                            </div>
+                          </div>
+                         </div>
+                       </form>
+                 </div>
+            </div>
+<!--         </div>-->
+     </div>
+ </div>
+
+<!-- </section>-->
+
+
+{% endblock %}
